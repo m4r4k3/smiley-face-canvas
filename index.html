@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: beige;
+            width:98vw;
+            height: 97vh;
+        }
+    </style>
+</head>
+<body>
+<canvas id="c" width="1000" height="500"></canvas>
+<script>
+const p=Math.PI 
+const c=document.getElementById("c")
+const ctx = c.getContext("2d")
+
+ctx.beginPath()
+ctx.arc(500,250,200,0,p*2 )
+ctx.shadowColor = "black";
+ctx.shadowBlur = 15;
+ctx.fillStyle="#ffd528"
+ctx.fill()
+
+ctx.beginPath()
+ctx.arc(400,200,25,0,p*2)
+ctx.arc(600,200,25,0,p*2)
+ctx.fillStyle="black"
+ctx.fill()
+
+ctx.beginPath()
+ctx.arc(390,190,5,0,p*2)
+ctx.arc(610,190,5,0,p*2)
+ctx.fillStyle= "white"
+ctx.fill()
+
+ctx.beginPath()
+ctx.arc(500,250,150,0,p)
+ctx.strokeStyle= "black"
+ctx.lineWidth="5"
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(650,235,15,0,p)
+ctx.strokeStyle= "black"
+ctx.lineWidth="2"
+ctx.stroke()
+
+ctx.beginPath()
+ctx.arc(350,235,15,0,p)
+ctx.strokeStyle= "black"
+ctx.lineWidth="3"
+ctx.stroke()
+
+</script>
+</body>
+</html>
